@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'category.dart';
+
 
 class WelcomeBackPage extends StatelessWidget {
   @override
@@ -26,9 +28,13 @@ class WelcomeBackPage extends StatelessWidget {
             SizedBox(height: 30),
             ElevatedButton(
               child: Text('Proceed'),
-              onPressed: () {
-                // Handle what happens next after logging in
+              onPressed: ()  {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  CategoryDetailPage()),
+                );
               },
+
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.orange,

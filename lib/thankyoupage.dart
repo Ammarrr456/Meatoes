@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'category.dart';
 
 class ThankYouPage extends StatelessWidget {
   @override
@@ -10,7 +12,7 @@ class ThankYouPage extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.all(20),
-        color: Colors.orangeAccent, // Background color
+        color: Colors.orange, // Background color
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -24,17 +26,23 @@ class ThankYouPage extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            SizedBox(height: 30),
+
+
             ElevatedButton(
               child: Text('Next'),
               onPressed: () {
-                // Navigate to the next page or action
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  CategoryDetailPage()),
+                );
               },
               style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white, backgroundColor: Colors.orange, // Text color
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.orange, // Text color
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
               ),
             ),
+
           ],
         ),
       ),

@@ -3,13 +3,15 @@ import 'signup_page.dart'; // make sure this path is correct
 import 'login_page.dart'; // make sure this path is correct
 
 class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/roasted_chicken.jfif'),
+            image: AssetImage('assets/images/Naya1.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -17,7 +19,7 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
+              const Text(
                 '      Meatoes\nServe with love  !',
                 style: TextStyle(
                   fontSize: 24,
@@ -25,33 +27,35 @@ class WelcomePage extends StatelessWidget {
                   color: Colors.white, // You might want to change the text color for better visibility
                 ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
                   backgroundColor: Colors.orange,
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 25),
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignupPage()),
+                    MaterialPageRoute(builder: (context) => const SignupPage()),
                   );
                 },
-                child: Text('Sign Up'),
+                child: const Text('Sign Up'),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
                   backgroundColor: Colors.orange,
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 25),
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => const LoginPage()),
                   );
                 },
-                child: Text('Login'),
+                child: const Text('Login'),
               ),
             ],
           ),
